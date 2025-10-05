@@ -1,14 +1,13 @@
-import { initializeApp } from "firebase/app";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAUj9w89BSmzO7QIlU5w6fFzB-_FR_tktw",
-  authDomain: "women-safest-route.firebaseapp.com",
-  databaseURL: "https://women-safest-route-default-rtdb.firebaseio.com",
-  projectId: "women-safest-route",
-  storageBucket: "women-safest-route.firebasestorage.app",
-  messagingSenderId: "900494947297",
-  appId: "1:900494947297:web:f832c14cf960069efd58a0"
-};
-
-const app = initializeApp(firebaseConfig);
+{
+  "type": "service_account",
+  "project_id": "women-safest-route",
+  "private_key_id": "0dec393b0557de3eb541ac985762804a252b6572",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCzMya5uIIEOzRO\naS16SOu2Pplq+wkFecc4v4uUx+loWQPu5MFwJEwCRX6LwiT4RIoH6tWF5qg03E0S\nbgSGwk1YsXZpL/2WgMURWFl1L93/5jVlU0+UR9V6GB3oaSfh0Hk6LVb13gkvyvog\nZ2Pz9bXUl/YqLMH8ldFRt4SihM148NqTWx+FUXBrm2Aw8P4IenZ3PjWo0u16zLyS\ndOc6Nz6ti+ts+Gtgugr8KPSplxBhFLh7SGJwkLloBKQ9k06pkpNvg72q7WFwVvc2\nKhuVI/YB+F7vi34it1NiK6owFaVQUOKWwZlB4gDQlJYifbNIgeC72DXm1uq9+FZy\nznEZO9bVAgMBAAECggEASjgj0GUGWIlK2zT9tHmSQst/kEsDzARJiovu3ELGPcUs\nd1vAcFlgL8qnpGvXEwqUHr5ZDFnhje82bq0pa8T68wKhN+S8A4M22727Y2ldaZjn\nwZ01RwVPef+WF4XCEmldZEaWD0QUivpnCVe5ErhQRIph1srt11cXuGApa4RUc8Og\nA07lCiN7fUp+sZPb901rmvVVniWz5R6asm2/Hgr5NSS1VD5i2eGIbFzi41HenNJu\nQGzOKTOlwyHTUdzId32KvNcIyOdYe5qftraPkozMjqPkHo3MVYpX+eO0Qz0NUlUQ\n8xrn5MkJJF2rwpFapg7vTiokl8WbN2UnquUbLaQjSwKBgQDkUR5AbOK2GAbC0InZ\n9m9t3Tohn4ehCtGWi/2okVcgS+wFo/Tdvc1XhKBmSu6Y/saIRE3aQwUbxlNBu1De\n82YjL+86YqSZCNQAWq5QIM4sAlsEjt+eqnWJYXfEwyLaS3HeS0QhGBs1nYkT0si7\nOKCzxHXLD3QOyfjfsjBP4mMWiwKBgQDI7XSaT++T61+l/c6X0LVdYGLeDShwnPHu\nXaUjJoARQHXEmyzrFaE+G9zJAxFX+c0GdXOPGuzKxHcqXe3QrXHdgJaAbNzSu25H\nQHP805fP76SlT21Kzz2eyTw3L8E7D1YYK3tAxpekcmbfxOUoDecm1cRRLe+TO44I\nSYVKpNPUHwKBgQCnrLMs2Up+NJLyi7hRbFxVMP06KDCxIoLdrx2wqFx2CYvicJCq\nMHQXa/1oYmtrzN/8vzz1p/aeeT43rdssgVBnUxK7rCn5gbRANliB3DXNuEUjydGM\nct8y73PH+w8jhfiwKlJ0g4GoFHPRLSHh7SqIGyXu5QB0w/uUPQaiBD6FFQKBgGbt\nXSH/eNbpaCH8FmymuYGP8pWVX/XwL+7PgdyzyD8OKkYAx83VUrgiRcOjEqtih6ib\nWgsg29QzOGg3na+cagvx5yb6nVRGN4PAfKozKj2WoV0dhvsflo1UwMf0aqP6gzv2\najkQgnX3NMPEdS9Dj/nQ37RGN8fQZj3Qi7tlHC45AoGBALuuV9+oZZJERHc9lcv4\nVHbUgsp0yT4SduOcRoFhfcL+H9BdCjzdWYyqfhTY3DimVuCnEWHy05i0x0IJ/iuP\nevicAdxdVeGJqEvgU88aRWiqAZfwmSXEgO+MZdCxXiyPcW+8fIi6qCqkLsAPZ4ar\nAiuvCylDvJwLkRp0KRYSSMk2\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@women-safest-route.iam.gserviceaccount.com",
+  "client_id": "113546222942600493124",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40women-safest-route.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
