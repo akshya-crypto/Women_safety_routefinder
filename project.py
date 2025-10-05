@@ -176,12 +176,13 @@ def find_route():
 @app.route("/feedback", methods=["POST"])
 def feedback():
     rating = request.form.get("rating")
-    feedback_text = request.form.get("feedback")
+    if rating:
+        
+        feedback_data = {"rating": rating}
+        db.collection("feedback").add(feedback_data)
 
-    print(f"User Feedback: Rating={rating}, Comment={feedback_text}")
-
-    return "<script>alert('✅ Thank you for your feedback!'); window.location.href='/'</script>"
-   
+    return render_template("feedback.html")
+  
 # ======= Run App =======
 if __name__ == "__main__":
     app.run(debug=True)
