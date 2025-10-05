@@ -88,5 +88,22 @@
   {{ map_html | safe }}
 {% endif %}
 
+    <hr />
+<h3>Rate Your Safety Experience</h3>
+<form action="/feedback" method="POST">
+  <label for="rating">Rate safety of the route (1 - 5):</label><br />
+  <select name="rating" id="rating" required>
+    <option value="">--Select--</option>
+    <option value="1">1 - Very Unsafe</option>
+    <option value="2">2 - Unsafe</option>
+    <option value="3">3 - Neutral</option>
+    <option value="4">4 - Safe</option>
+    <option value="5">5 - Very Safe</option>
+  </select><br /><br />
+
+  <textarea name="feedback" placeholder="Optional comments..." rows="3" cols="40"></textarea><br /><br />
+  <button type="submit">Submit Feedback</button>
+</form>
+  
   </body>
 </html>
