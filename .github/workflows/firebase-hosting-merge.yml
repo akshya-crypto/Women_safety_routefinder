@@ -9,32 +9,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 🧩 Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 🧩 Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 🧩 Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 🧩 Step 4: Build the project
       - name: Build project
         run: npm run build
 
-      # 🧩 Step 5: Install Firebase CLI
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      # 🧩 Step 6: Deploy to Firebase using your service account key
-      - name: Deploy to Firebase Hosting
+      - name: Authenticate and Deploy to Firebase
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/firebase-key.json
         run: |
-          echo "Using service account for Firebase authentication..."
-          firebase deploy --only hosting --project "women-safest-route"
+          echo "🔐 Authenticating using service account key..."
+          export GOOGLE_APPLICATION_CREDENTIALS=${{ github.workspace }}/firebase-key.json
+          firebase login:ci --no-localhost || echo "Skipping token creation, using service account"
+          firebase use women-safest-route --add || echo "Using existing project"
+          firebase deploy --only hosting --project women-safest-route --debug
