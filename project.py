@@ -173,14 +173,13 @@ def find_route():
         all_paths=result["allPaths"],
         map_html=map_html
     )
+    
 @app.route("/feedback", methods=["POST"])
 def feedback():
     rating = request.form.get("rating")
-    if rating:
-        
-        feedback_data = {"rating": rating}
-        db.collection("feedback").add(feedback_data)
-
+    feedback_text = request.form.get("feedback")
+    print(f"User Feedback: Rating={rating}, Comment={feedback_text}")
+    
     return render_template("feedback.html")
   
 # ======= Run App =======
