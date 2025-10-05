@@ -173,14 +173,14 @@ def find_route():
         all_paths=result["allPaths"],
         map_html=map_html
     )
- @app.route("/feedback", methods=["POST"])
- def feedback():
-     rating = request.form.get("rating")
-     feedback_text = request.form.get("feedback")
+@app.route("/feedback", methods=["POST"])
+def feedback():
+    rating = request.form.get("rating")
+    feedback_text = request.form.get("feedback")
 
-     print(f"User Feedback: Rating={rating}, Comment={feedback_text}")
+    print(f"User Feedback: Rating={rating}, Comment={feedback_text}")
 
-     return "<script>alert('✅ Thank you for your feedback!'); window.location.href='/'</script>"
+    return "<script>alert('✅ Thank you for your feedback!'); window.location.href='/'</script>"
    
 # ======= Run App =======
 if __name__ == "__main__":
