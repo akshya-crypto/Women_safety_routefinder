@@ -3,7 +3,7 @@ name: 🚀 Deploy to Firebase Hosting
 on:
   push:
     branches:
-      - main  # or your deployment branch
+      - main  # or whichever branch you deploy from
 
 jobs:
   deploy:
@@ -21,13 +21,11 @@ jobs:
       - name: 📦 Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: 🔐 Authenticate with Firebase
-        env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+      - name: 🔐 Authenticate with firebase-key.json
         run: |
           echo "🔐 Authenticating using firebase-key.json..."
-          echo "$FIREBASE_SERVICE_ACCOUNT" > firebase-key.json
           export GOOGLE_APPLICATION_CREDENTIALS=firebase-key.json
+          ls -l firebase-key.json || echo "⚠️ firebase-key.json not found!"
 
       - name: 🚀 Deploy to Firebase Hosting
         run: |
