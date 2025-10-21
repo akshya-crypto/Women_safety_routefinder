@@ -26,4 +26,4 @@ jobs:
           export GOOGLE_APPLICATION_CREDENTIALS=firebase-key.json
 
       - name: Deploy to Firebase
-        run: firebase deploy --project your-project-id --non-interactive
+        run: firebase deploy --women-safest-route--non-interactive
