@@ -1,28 +1,16 @@
 name: 🚀 Deploy to Firebase Hosting
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:  # manually trigger workflow
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🧾 Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: ⚙️ Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: 📦 Install Firebase CLI
-        run: npm install -g firebase-tools
-
-      - name: ⚡ Interactive Firebase Login
-        run: firebase login
-
-      - name: 🚀 Deploy to Firebase Hosting
-        run: firebase deploy --project women-safest-route
+      - run: npm install -g firebase-tools
+      - run: firebase login   # must be clicked manually in browser
+      - run: firebase deploy --project women-safest-route
