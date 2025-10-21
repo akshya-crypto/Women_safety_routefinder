@@ -1,16 +1,30 @@
-name: 🚀 Deploy to Firebase Hosting
+name: Deploy Women Safety Route
 
 on:
-  workflow_dispatch:  # manually trigger workflow
+  workflow_dispatch:  # manual trigger
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install -g firebase-tools
-      - run: firebase login   # must be clicked manually in browser
-      - run: firebase deploy --project women-safest-route
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Deploy to Firebase Hosting
+        run: |
+          firebase deploy \
+            --project women-safest-route-finder \
+            --token 1//0gtm_Kuo2w6SuCgYIARAAGBASNwF-L9Ir82ay1Hqb7XOJW7xYUhtEvA9yD7CatKw8KV5ahGKu_NHb_JKBNtvp9YXgrOaZwPJxKhk
+            --non-interactive
